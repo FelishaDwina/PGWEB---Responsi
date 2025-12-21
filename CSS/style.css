@@ -1,0 +1,395 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-blue: #007bff; /* Core Blue */
+    --dark-blue: #0056b3; /* Darker Blue */
+    --light-blue: #e0f2f7; /* Lighter Blue */
+
+    --primary-yellow: #ffc107; /* Core Yellow for warning/accents */
+    --dark-yellow: #e0a800; /* Darker Yellow */
+
+    --primary-green: #28a745; /* Core Green for success/accents */
+    --dark-green: #218838; /* Darker Green */
+    --light-green: #d4edda; /* Light Green for table rows */
+
+    --text-dark: #343a40;
+    --text-light: #f8f9fa;
+    --gray-bg: #f8f9fa;
+    --border-light: #dee2e6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--gray-bg);
+    color: var(--text-dark);
+}
+
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-image: linear-gradient(to right, var(--dark-blue), var(--primary-blue)) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--text-light) !important;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 400;
+    margin-left: 15px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Hero Image/Banner */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/bg.jpg');
+  height: 100vh; /* Full viewport height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 0; /* Remove margin for fullscreen effect */
+  box-shadow: none; /* No shadow for fullscreen */
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    font-weight: 600;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1rem 1.5rem;
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Button Styling */
+.btn {
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.7rem 1.2rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Keeping a standard grey for secondary */
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info {
+    background-color: var(--primary-blue); /* Info button now uses primary blue */
+    border-color: var(--primary-blue);
+}
+
+.btn-info:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning {
+    background-color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
+    color: var(--text-dark);
+}
+
+.btn-warning:hover {
+    background-color: var(--dark-yellow);
+    border-color: var(--dark-yellow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Keeping standard red for danger */
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.btn-success:hover {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons-cell .btn-sm {
+    padding: 0.25rem 0.5rem; /* Even smaller padding */
+    font-size: 0.75rem; /* Smaller font size */
+    line-height: 1; /* Adjust line height for better vertical alignment */
+}
+
+/* Extra small button for popups */
+.btn-xs {
+    padding: 0.1rem 0.3rem; /* Very small padding */
+    font-size: 0.65rem; /* Very small font size */
+    line-height: 1;
+    border-radius: 3px;
+}
+
+/* Styling for Leaflet Popups */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px; /* Slightly more rounded */
+    padding: 0; /* Remove default padding, content will handle its own */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    background-color: #fff; /* White background for clean look */
+    color: var(--text-dark); /* Ensure text color is readable */
+}
+
+.leaflet-popup-content {
+    text-align: left; /* Align text left within popup */
+    margin: 0; /* Remove default margin */
+    padding: 15px; /* Add padding to content */
+    font-size: 0.9rem; /* Slightly smaller font for popup text */
+    line-height: 1.4;
+}
+
+/* Styling for the popup tip (arrow) */
+.leaflet-popup-tip {
+    background: #fff; /* Match popup background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Match shadow */
+}
+
+.popup-content {
+    padding: 5px;
+}
+
+.popup-img {
+    max-width: 150px; /* Max width for images in popups */
+    height: auto;
+    border-radius: 5px;
+    display: block; /* Ensure image is block level for margin auto */
+    margin: 0 auto 8px auto; /* Center image and add bottom margin */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Marker active state (for glow effect) */
+.marker-active {
+    /* Brighter glow effect */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8)) drop-shadow(0 0 15px rgba(255, 255, 200, 0.5));
+    transition: filter 0.2s ease-out; /* Smooth transition for the glow */
+}
+
+/* Table Styling */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.table thead th {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    border-color: var(--primary-blue);
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: var(--light-green); /* Using light green for even rows */
+}
+
+.table tbody tr:hover {
+    background-color: #badbcc; /* Slightly darker light green for hover */
+    cursor: pointer;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Forms */
+.form-control {
+    border-radius: 5px;
+    border-color: #ced4da;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow for blue */
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Utility classes for images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Map specific styling (if #map is present) */
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    position: relative; /* Needed for absolute positioning of child controls */
+}
+
+/* Map controls styling */
+.map-control-container {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000; /* Ensure it's above the map tiles */
+}
+
+#map-search-control {
+    position: absolute;
+    bottom: 10px; /* Change from top to bottom */
+    left: 10px;
+    max-width: 250px; /* Limit width */
+    font-size: 0.9rem;
+}
+
+#map-search-control .input-group-sm .form-control,
+#map-search-control .input-group-sm .btn {
+    padding: 0.3rem 0.6rem; /* Smaller padding for search control */
+    font-size: 0.8rem;
+}
+
+
+/* Leaflet legend styling */
+.info.legend {
+    background: #fff;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: auto; /* Allow content to dictate width */
+    line-height: 1.5;
+    text-align: left;
+}
+.info.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+    border: 1px solid #ccc; /* Default border for legend items */
+}
+
+.legend-square {
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Specific styles for dashed border already in JS inline style */
+}
+
+/* Legend Icon */
+.legend-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 1px solid var(--text-dark); /* Border for legend icon */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--text-light);
+    padding: 30px 0;
+    text-align: center;
+    /* margin-top: 40px; This margin is removed to allow footer to sit right after hero-image */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
