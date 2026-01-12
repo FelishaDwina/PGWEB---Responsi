@@ -57,7 +57,7 @@ $query = "INSERT INTO pelabuhan (Nama, Jenis, Lokasi, Latitude, Longitude, Statu
           VALUES ('$nama', '$jenis', '$lokasi', '$latitude', '$longitude', '$status', '$deskripsi', '$gambar')";
 
 // Eksekusi query
-if (.mysqli_query($koneksi, $query)) {
+if (mysqli_query($koneksi, $query)) {
     // Redirect kembali ke halaman tabel jika berhasil
     header("Location: tabel.html");
     exit();
